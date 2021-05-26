@@ -8,10 +8,31 @@
 } else {
     <ol>
     @foreach (var p in Model) {
-        <li class="d-flex">
-            <div><img src="@p.Foto" /></div>
-            <div>@p.Nombre</div>
-        </li>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Imagen</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Celular</th>
+      <th scope="col">Lugar</th>
+      <th scope="col">Categoria</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><img src="@p.Foto" /></td>
+      <td>@p.Nombre</td>
+      <td>@p.Precio</td>
+      <td>@p.Celular</td>
+      <td>@p.Lugar</td>
+      <td>@p.Categoria</td>
+    </tr>
+    
+  </tbody>
+</table>
     }
     </ol>
 }
